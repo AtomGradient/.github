@@ -12,6 +12,8 @@ We believe powerful AI should be **private**, **fast**, and **free from cloud de
 
 | Project | Description | Highlights |
 |---------|-------------|------------|
+| [**speculative-moe-research**](https://github.com/AtomGradient/speculative-moe-research) | Does speculative decoding help Mixture-of-Experts? Empirical study on Qwen3.5-35B-A3B | 1.30× MoE speedup · <4% acceptance · batch verification amortization |
+| [**apple-silicon-llm-inference**](https://github.com/AtomGradient/apple-silicon-llm-inference) | Efficient on-device LLM inference: from quantization to speculative decoding | Q6_K Pareto-optimal · +25.7% SD throughput · 7 quant levels benchmarked |
 | [**Prism**](https://github.com/AtomGradient/Prism) | Cross-domain personal data integration on consumer hardware | 1.48x IIR · 125.5x federation compression · 49.9 TPS (35B on M2 Ultra) |
 | [**hybird-batch-prefill-on-ane**](https://github.com/AtomGradient/hybird-batch-prefill-on-ane) | ANE batch prefill for on-device parallel LLM inference | 11.3x prefill speedup · 79% power reduction · <30ms state transfer |
 | [**hybrid-ane-mlx-bench**](https://github.com/AtomGradient/hybrid-ane-mlx-bench) | Disaggregated LLM inference on Apple Silicon | ANE matches GPU at ~410 tokens · 282x power reduction |
