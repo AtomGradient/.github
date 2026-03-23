@@ -12,7 +12,6 @@ We believe powerful AI should be **private**, **fast**, and **free from cloud de
 
 | Project | Description | Highlights |
 |---------|-------------|------------|
-| [**H2OAttnScore**](https://github.com/AtomGradient/H2OAttnScore) | H₂O attention score KV cache eviction for on-device LLM inference in MLX | 2–3× better quality vs sliding-window · +0.9–1.5% PPL · <0.3% overhead |
 | [**speculative-moe-research**](https://github.com/AtomGradient/speculative-moe-research) | Does speculative decoding help Mixture-of-Experts? Empirical study on Qwen3.5-35B-A3B | 1.30× MoE speedup · <4% acceptance · batch verification amortization |
 | [**apple-silicon-llm-inference**](https://github.com/AtomGradient/apple-silicon-llm-inference) | Efficient on-device LLM inference: from quantization to speculative decoding | Q6_K Pareto-optimal · +25.7% SD throughput · 7 quant levels benchmarked |
 | [**Prism**](https://github.com/AtomGradient/Prism) | Cross-domain personal data integration on consumer hardware | 1.48x IIR · 125.5x federation compression · 49.9 TPS (35B on M2 Ultra) |
