@@ -4,7 +4,7 @@
 
 We believe powerful AI should be **private**, **fast**, and **free from cloud dependency**. All our research is open-source.
 
-🌐 [atomgradient.com](https://atomgradient.com) · 🚀 [EchoStream AI](https://www.echostream-ai.com/)
+🌐 [atomgradient.com](https://atomgradient.com)
 
 ---
 
