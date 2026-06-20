@@ -2,7 +2,9 @@
 
 > **Private AI that lives on your device** — We build the full stack for on-device AI: from the inference engine to the app you ship.
 
-Data never leaves the device. Models get smarter over time. No cloud required.
+*They said weights are frozen. We made them grow with you.*
+
+**AI Models That Grow for You.** A model born for you. No matter how time passes or the world changes, it is your most faithful companion — facing the world as you do, learning and growing together, never leaving your side.
 
 🌐 [atomgradient.com](https://atomgradient.com) · 📖 [Developer Docs](https://www.atomgradient.com/en/developers)
 
