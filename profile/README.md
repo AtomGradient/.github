@@ -1,35 +1,56 @@
 # AtomGradient ⚡
 
-> **Bringing AI to the Edge** — We build open research and products for on-device AI inference on Apple Silicon and consumer hardware.
+> **Private AI that lives on your device** — We build the full stack for on-device AI: from the inference engine to the app you ship.
 
-We believe powerful AI should be **private**, **fast**, and **free from cloud dependency**. All our research is open-source.
+Data never leaves the device. Models get smarter over time. No cloud required.
 
-🌐 [atomgradient.com](https://atomgradient.com)
-
----
-
-## Research
-
-| Project | Description | Highlights |
-|---------|-------------|------------|
-| [**speculative-moe-research**](https://github.com/AtomGradient/speculative-moe-research) | Does speculative decoding help Mixture-of-Experts? Empirical study on Qwen3.5-35B-A3B | 1.30× MoE speedup · <4% acceptance · batch verification amortization |
-| [**apple-silicon-llm-inference**](https://github.com/AtomGradient/apple-silicon-llm-inference) | Efficient on-device LLM inference: from quantization to speculative decoding | Q6_K Pareto-optimal · +25.7% SD throughput · 7 quant levels benchmarked |
-| [**Prism**](https://github.com/AtomGradient/Prism) | Cross-domain personal data integration on consumer hardware | 1.48x IIR · 125.5x federation compression · 49.9 TPS (35B on M2 Ultra) |
-| [**hybird-batch-prefill-on-ane**](https://github.com/AtomGradient/hybird-batch-prefill-on-ane) | ANE batch prefill for on-device parallel LLM inference | 11.3x prefill speedup · 79% power reduction · <30ms state transfer |
-| [**hybrid-ane-mlx-bench**](https://github.com/AtomGradient/hybrid-ane-mlx-bench) | Disaggregated LLM inference on Apple Silicon | ANE matches GPU at ~410 tokens · 282x power reduction |
-| [**swift-qwen3-tts**](https://github.com/AtomGradient/swift-qwen3-tts) | On-device text-to-speech (Qwen3 TTS 0.6B, native Swift) | 67% compression · RTF 0.68x · 12 languages |
-| [**swift-gemma-cli**](https://github.com/AtomGradient/swift-gemma-cli) | On-device vision language model (Gemma 3 4B) | 25% compression · 110 tok/s · 3.4x image speedup |
-| [**OptMLX**](https://github.com/AtomGradient/OptMLX) | MLX memory optimization research | 20x mmap speedup · zero-copy model loading |
+🌐 [atomgradient.com](https://atomgradient.com) · 📖 [Developer Docs](https://www.atomgradient.com/en/developers)
 
 ---
 
-## Focus Areas
+## Products
 
-- **Edge Inference** — Running large models on consumer Apple Silicon (ANE + GPU hybrid pipelines)
-- **Model Compression** — Quantization, pruning, and distillation for on-device deployment
-- **Privacy-First AI** — All computation local, zero data leakage
-- **Open Research** — Reproducible benchmarks and open-source implementations
+The Edge stack — everything you need to build, optimize, and ship on-device AI apps on Apple Silicon.
+
+| Layer | Repo | What it does |
+|-------|------|-------------|
+| **Engine** | [**edge-engine**](https://github.com/AtomGradient/edge-engine) | Native Metal inference runtime — LLM, VLM, ASR, TTS on Apple Silicon |
+| **SDK** | [**edge-kit**](https://github.com/AtomGradient/edge-kit) | Swift SDK — load models, stream tokens, manage memory, mesh devices |
+| **Learning** | [**edge-halo**](https://github.com/AtomGradient/edge-halo-binary) | On-device self-learning — models grow with you, data never leaves the device |
+| **App Template** | [**edge-scaffold**](https://github.com/AtomGradient/edge-scaffold) | iOS app scaffold — import EdgeKit, customize, ship to App Store |
+| **Workbench** | [**edge-studio**](https://github.com/AtomGradient/edge-studio) | Python CLI + web UI — analyze, optimize, benchmark, export models |
+
+```
+edge-studio (optimize & export)
+    ↓
+edge-scaffold (iOS app template)
+    ├── edge-kit (Swift SDK)
+    │     └── edge-engine (Metal inference)
+    └── edge-halo (on-device learning, binary)
+```
+
+```bash
+# Get started
+pip install edge-studio           # Python workbench
+edge demo chat                    # Try on-device chat
+```
+
+```swift
+// Swift — 5 lines to on-device LLM
+import EdgeInference
+let engine = LLMEngine()
+try await engine.loadLocal(directory: modelURL)
+for try await chunk in engine.generate(messages: [.user("Hello")]) {
+    print(chunk.text, terminator: "")
+}
+```
 
 ---
 
-<sub>© 2026 AtomGradient · All research open-source under MIT</sub>
+## Research & Tools
+
+[speculative-moe-research](https://github.com/AtomGradient/speculative-moe-research) · [apple-silicon-llm-inference](https://github.com/AtomGradient/apple-silicon-llm-inference) · [Prism](https://github.com/AtomGradient/Prism) · [hybird-batch-prefill-on-ane](https://github.com/AtomGradient/hybird-batch-prefill-on-ane) · [hybrid-ane-mlx-bench](https://github.com/AtomGradient/hybrid-ane-mlx-bench) · [swift-qwen3-tts](https://github.com/AtomGradient/swift-qwen3-tts) · [swift-gemma-cli](https://github.com/AtomGradient/swift-gemma-cli) · [OptMLX](https://github.com/AtomGradient/OptMLX) · [Vanilla](https://github.com/AtomGradient/Vanilla)
+
+---
+
+<sub>© 2026 AtomGradient · Products and research open-source under MIT</sub>
